@@ -1,0 +1,65 @@
+Compilation warnings/errors on flattened_contracts/GsnCapableDocumentStore.sol:
+Warning: SPDX license identifier not provided in source file. Before publishing, consider adding a comment containing "SPDX-License-Identifier: <SPDX-License>" to each source file. Use "SPDX-License-Identifier: UNLICENSED" for non-open-source code. Please see https://spdx.org for more information.
+--> flattened_contracts/GsnCapableDocumentStore.sol
+
+
+Compilation warnings/errors on flattened_contracts/UpgradableDocumentStore.sol:
+Warning: SPDX license identifier not provided in source file. Before publishing, consider adding a comment containing "SPDX-License-Identifier: <SPDX-License>" to each source file. Use "SPDX-License-Identifier: UNLICENSED" for non-open-source code. Please see https://spdx.org for more information.
+--> flattened_contracts/UpgradableDocumentStore.sol
+
+
+Compilation warnings/errors on flattened_contracts/NaivePaymaster.sol:
+Warning: SPDX license identifier not provided in source file. Before publishing, consider adding a comment containing "SPDX-License-Identifier: <SPDX-License>" to each source file. Use "SPDX-License-Identifier: UNLICENSED" for non-open-source code. Please see https://spdx.org for more information.
+--> flattened_contracts/NaivePaymaster.sol
+
+
+Compilation warnings/errors on flattened_contracts/DocumentStore.sol:
+Warning: SPDX license identifier not provided in source file. Before publishing, consider adding a comment containing "SPDX-License-Identifier: <SPDX-License>" to each source file. Use "SPDX-License-Identifier: UNLICENSED" for non-open-source code. Please see https://spdx.org for more information.
+--> flattened_contracts/DocumentStore.sol
+
+
+Compilation warnings/errors on flattened_contracts/OwnableDocumentStore.sol:
+Warning: SPDX license identifier not provided in source file. Before publishing, consider adding a comment containing "SPDX-License-Identifier: <SPDX-License>" to each source file. Use "SPDX-License-Identifier: UNLICENSED" for non-open-source code. Please see https://spdx.org for more information.
+--> flattened_contracts/OwnableDocumentStore.sol
+
+
+Compilation warnings/errors on flattened_contracts/DocumentStoreWithRevokeReasons.sol:
+Warning: SPDX license identifier not provided in source file. Before publishing, consider adding a comment containing "SPDX-License-Identifier: <SPDX-License>" to each source file. Use "SPDX-License-Identifier: UNLICENSED" for non-open-source code. Please see https://spdx.org for more information.
+--> flattened_contracts/DocumentStoreWithRevokeReasons.sol
+
+
+Compilation warnings/errors on flattened_contracts/GsnCapable.sol:
+Warning: SPDX license identifier not provided in source file. Before publishing, consider adding a comment containing "SPDX-License-Identifier: <SPDX-License>" to each source file. Use "SPDX-License-Identifier: UNLICENSED" for non-open-source code. Please see https://spdx.org for more information.
+--> flattened_contracts/GsnCapable.sol
+
+
+Compilation warnings/errors on flattened_contracts/DocumentStoreCreator.sol:
+Warning: SPDX license identifier not provided in source file. Before publishing, consider adding a comment containing "SPDX-License-Identifier: <SPDX-License>" to each source file. Use "SPDX-License-Identifier: UNLICENSED" for non-open-source code. Please see https://spdx.org for more information.
+--> flattened_contracts/DocumentStoreCreator.sol
+
+
+Compilation warnings/errors on flattened_contracts/BaseDocumentStore.sol:
+Warning: SPDX license identifier not provided in source file. Before publishing, consider adding a comment containing "SPDX-License-Identifier: <SPDX-License>" to each source file. Use "SPDX-License-Identifier: UNLICENSED" for non-open-source code. Please see https://spdx.org for more information.
+--> flattened_contracts/BaseDocumentStore.sol
+
+
+INFO:Detectors:[91m
+OwnableUpgradeable.__gap (flattened_contracts/UpgradableDocumentStore.sol#102) shadows:
+	- ContextUpgradeable.__gap (flattened_contracts/UpgradableDocumentStore.sol#59)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#state-variable-shadowing[0m
+INFO:Detectors:[91m
+Forwarder.execute(IForwarder.ForwardRequest,bytes32,bytes32,bytes,bytes) (flattened_contracts/NaivePaymaster.sol#851-872) sends eth to arbitrary user
+	Dangerous calls:
+	- (success,ret) = req.to.call{gas: req.gas,value: req.value}(abi.encodePacked(req.data,req.from)) (flattened_contracts/NaivePaymaster.sol#866)
+	- address(req.from).transfer(address(this).balance) (flattened_contracts/NaivePaymaster.sol#869)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#functions-that-send-ether-to-arbitrary-destinations[0m
+INFO:Detectors:[91m
+OwnableUpgradeable.__gap (flattened_contracts/DocumentStoreWithRevokeReasons.sol#102) shadows:
+	- ContextUpgradeable.__gap (flattened_contracts/DocumentStoreWithRevokeReasons.sol#59)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#state-variable-shadowing[0m
+INFO:Detectors:[91m
+OwnableUpgradeable.__gap (flattened_contracts/DocumentStoreCreator.sol#102) shadows:
+	- ContextUpgradeable.__gap (flattened_contracts/DocumentStoreCreator.sol#59)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#state-variable-shadowing[0m
+INFO:Slither:flattened_contracts analyzed (70 contracts with 38 detectors), 4 result(s) found
+INFO:Slither:[94mUse https://crytic.io/ to get access to additional detectors and Github integration[0m
