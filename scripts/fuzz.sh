@@ -1,0 +1,1 @@
+echidna-test fuzzing_contracts/DocumentStore.sol --contract Tester --config .echidna.yaml

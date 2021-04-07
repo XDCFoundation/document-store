@@ -9,3 +9,6 @@ yarn-error.log
 /dist
 /build
 /types
+/flattened_contracts
+/echidna_test
+/crytic-export
